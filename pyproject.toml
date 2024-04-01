@@ -14,7 +14,7 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/IdEatSomeFish/p621"
+Repository = "https://github.com/IdEatSomeFish/p621"
 
 [build-system]
 requires = ["hatchling"]
