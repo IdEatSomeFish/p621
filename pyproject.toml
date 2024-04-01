@@ -13,6 +13,9 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
+[project.urls]
+Homepage = "https://github.com/IdEatSomeFish/p621"
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
