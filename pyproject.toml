@@ -8,9 +8,12 @@ description = "an oversimplified wrapper and interactivity for the e621 API"
 readme = "README.md"
 requires-python = ">=3"
 classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "requests"
 ]
 
 [project.urls]
