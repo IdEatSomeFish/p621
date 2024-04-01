@@ -1,1 +1,1 @@
-from .requests import list_posts, list_favorites
+from .requests import search_posts, list_favorites
