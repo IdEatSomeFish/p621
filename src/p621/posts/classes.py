@@ -1,5 +1,3 @@
-from .interactions import download_post, open_post
-
 class File:
     def __init__(self, file: dict) -> None:
         self.dimensions: list[int] = [
@@ -77,7 +75,9 @@ class Post:
         self.uploader_id: int = post['uploader_id']
 
     def download(self, path: str = None) -> None:
+        from .interactions import download_post
         download_post(self, path)
 
     def open(self) -> None:
+        from .interactions import open_post
         open_post(self)
