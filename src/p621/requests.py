@@ -3,7 +3,7 @@ from p621.posts import Post
 import requests
 from requests import Response
 
-USER_AGENT: str = 'p621/0.1.0'
+USER_AGENT: str = 'p621/0.1.1'
 
 def search_posts(api_key: str, username: str, limit: int = None, tags: list[str] = None, page: int = None) -> list[Post]:
     parameters: dict = {'api_key': api_key, 'login': username}
