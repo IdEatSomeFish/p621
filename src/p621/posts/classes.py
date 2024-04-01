@@ -39,6 +39,9 @@ class Tags:
         self.meta: list[str] = tags['meta']
         self.lore: list[str] = tags['lore']
 
+    def dump(self) -> list[str]:
+        return self.general + self.artists + self.copyrights + self.characters + self.species + self.invalid + self.meta + self.lore
+
 
 class Post:
     def __init__(self, post: dict) -> None:
