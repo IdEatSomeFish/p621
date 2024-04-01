@@ -1,3 +1,5 @@
+from .interactions import download_post, open_post
+
 class File:
     def __init__(self, file: dict) -> None:
         self.dimensions: list[int] = [
@@ -75,16 +77,7 @@ class Post:
         self.uploader_id: int = post['uploader_id']
 
     def download(self, path: str = None) -> None:
-        import urllib.request
-
-        target: str = str(self.id) + '.' + self.file.extension
-        if path:
-            target = path + '/' + target
-
-        url: str = self.file.url
-        urllib.request.urlretrieve(url, target)
+        download_post(self, path)
 
     def open(self) -> None:
-        import webbrowser
-        url: str = 'https://e621.net/posts/' + str(self.id)
-        webbrowser.open(url)
+        open_post(self)
