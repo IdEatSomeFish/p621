@@ -1,12 +1,12 @@
 [project]
 name = "p621"
-version = "0.0.1"
+version = "0.1.0"
 authors = [
   { name="I'd Eat Some Fish", email="ideatsomefish@gmail.com" },
 ]
-description = "WIP E621 wrapper x3"
+description = "an oversimplified wrapper and interactivity for the e621 API"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
