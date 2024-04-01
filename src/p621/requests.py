@@ -5,7 +5,7 @@ from requests import Response
 
 USER_AGENT: str = 'p621/0.0.0'
 
-def list_posts(api_key: str, username: str, limit: int = None, tags: list[str] = None, page: int = None) -> list[Post]:
+def search_posts(api_key: str, username: str, limit: int = None, tags: list[str] = None, page: int = None) -> list[Post]:
     parameters: dict = {'api_key': api_key, 'login': username}
     if limit:
         parameters['limit'] = limit
