@@ -70,3 +70,15 @@ class Post:
 
         self.approver_id: int = post['approver_id']
         self.uploader_id: int = post['uploader_id']
+
+    def download(self, path: str = None) -> None:
+        import urllib.request
+
+        target: str = path + '/' + str(self.id) + '.' + self.file.extension
+        url: str = self.file.url
+        urllib.request.urlretrieve(url, target)
+
+    def open(self) -> None:
+        import webbrowser
+        url: str = 'https://e621.net/posts/' + str(self.id)
+        webbrowser.open(url)
