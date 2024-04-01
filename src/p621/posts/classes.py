@@ -77,7 +77,10 @@ class Post:
     def download(self, path: str = None) -> None:
         import urllib.request
 
-        target: str = path + '/' + str(self.id) + '.' + self.file.extension
+        target: str = str(self.id) + '.' + self.file.extension
+        if path:
+            target = path + '/' + target
+
         url: str = self.file.url
         urllib.request.urlretrieve(url, target)
 
