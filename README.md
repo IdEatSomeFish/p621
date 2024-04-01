@@ -20,7 +20,7 @@ an oversimplified wrapper and interactivity for the **e621** API
 ## example
 ```python
 >>> import p621
->>> posts = p621.search_posts('***REMOVED***', 'IdEatSomeFish', limit = 10, tags = ['male/male', 'cat', 'bird'])
+>>> posts = p621.search_posts('####', '####', limit = 10, tags = ['male/male', 'cat', 'bird'])
 >>> for post in posts:
 ...     print(post.id, post.file.extension)
 ...     post.download()
