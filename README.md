@@ -23,8 +23,11 @@ an oversimplified wrapper and interactivity for the **e621** API
 $ python -m pip install p621
 ```
 
+## documentation
+**[documentation can be found here](docs/index.adoc)**
+
 ## example
-### getting posts
+### getting post
 ```python
 >>> import p621
 >>> post = p621.get_post('###', '###', 4517306)

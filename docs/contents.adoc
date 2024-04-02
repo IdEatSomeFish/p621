@@ -1,0 +1,6 @@
+== contents
+
+=== about
+
+- *link:about/features.adoc[features]*
+- *link:about/installation.adoc[installation]*

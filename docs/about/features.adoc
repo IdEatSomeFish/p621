@@ -1,0 +1,17 @@
+= features
+
+== available features
+
+- searching posts
+- listing favorites
+- getting posts
+- downloading posts
+- opening posts
+
+== upcoming features
+
+- creating and updating posts
+- creating and updating pools
+- favoriting and unfavoriting posts
+- voting posts
+- listing tags
