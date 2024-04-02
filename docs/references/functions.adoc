@@ -1,0 +1,64 @@
+[cols='1,5']
+|===
+|`*search_posts*`
+|retrieves a list of posts, tags can be provided for specific searches
+
+|`*list_favorites*`
+|lists the favorite of a given user or the authorized user
+
+|`*get_post*`
+|retrieves post of a given ID
+|===
+
+
+== `search_posts`
+
+`p621.*search_posts*(_api_key_, _username_, _limit_, _tags_, _page_)`
+
+retrieves a list of posts, tags can be provided for specific searches
+
+=== parameters
+
+- str *api_key* - e621 API key, used for authorization
+- str *username* - e621 username, used for authorization
+- int *limit* (optional) - number of posts to retrieve, capped at a maximum of 320 posts
+- list[str] *tags* (optional) - a list of tags to search for
+- int *page* (optional) - page of the posts to retrieve
+
+=== returns
+
+list[Post] *posts* - list of retrieved posts
+
+
+== `list_favorites`
+
+`p621.*list_favorites*(_api_key_, _username_, _user_id_)`
+
+lists the favorite of a given user or the authorized user
+
+=== parameters
+
+- str *api_key* - e621 API key, used for authorization
+- str *username* - e621 username, used for authorization
+- int *user_id* (optional) - ID of the target user, authorized user will be used if unspecified
+
+=== returns
+
+list[Post] *posts* - list of retrieved posts
+
+
+== `get_post`
+
+`p621.*get_post*(_api_key_, _username_, _post_id_)`
+
+retrieves post of a given ID
+
+=== parameters
+
+- str *api_key* - e621 API key, used for authorization
+- str *username* - e621 username, used for authorization
+- int *post_id* - ID of the post to retrieve
+
+=== returns
+
+Post *post* - retrieved post

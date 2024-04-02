@@ -1,0 +1,31 @@
+[cols='1,5']
+|===
+|`*download_post*`
+|downloads the source file of the post
+
+|`*open_post*`
+|opens the web page of the post on the browser
+|===
+
+
+== `download_post`
+
+`p621.posts.*download_post*(post, path)`
+
+downloads the source file of the post
+
+=== parameters
+
+- Post *post* - the post to download
+- str *path* (optional) - path of the download, current directory if unspecified
+
+
+== `open_post`
+
+`p621.posts.*open_post*(post)`
+
+opens the web page of the post on the browser
+
+=== parameters
+
+- Post *post* - the post to open
