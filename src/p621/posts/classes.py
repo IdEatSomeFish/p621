@@ -74,6 +74,9 @@ class Post:
         self.approver_id: int = post['approver_id']
         self.uploader_id: int = post['uploader_id']
 
+    def page_url(self) -> str:
+        return 'https://e621.net/posts/' + str(self.id)
+
     def download(self, path: str = None) -> None:
         from .interactions import download_post
         download_post(self, path)

@@ -13,5 +13,5 @@ def download_post(post: Post, path: str = None) -> None:
 def open_post(post: Post) -> None:
     import webbrowser
     
-    url: str = 'https://e621.net/posts/' + str(post.id)
+    url: str = post.page_url()
     webbrowser.open(url)
