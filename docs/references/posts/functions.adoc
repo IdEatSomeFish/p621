@@ -16,8 +16,8 @@ downloads the source file of the post
 
 === parameters
 
-- Post *post* - the post to download
-- str *path* (optional) - path of the download, current directory if unspecified
+- _Post_ *post* - the post to download
+- _str_ *path* (optional) - path of the download, current directory if unspecified
 
 
 == `open_post`
@@ -28,4 +28,4 @@ opens the web page of the post on the browser
 
 === parameters
 
-- Post *post* - the post to open
+- _Post_ *post* - the post to open

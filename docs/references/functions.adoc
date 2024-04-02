@@ -19,15 +19,15 @@ retrieves a list of posts, tags can be provided for specific searches
 
 === parameters
 
-- str *api_key* - e621 API key, used for authorization
-- str *username* - e621 username, used for authorization
-- int *limit* (optional) - number of posts to retrieve, capped at a maximum of 320 posts
-- list[str] *tags* (optional) - a list of tags to search for
-- int *page* (optional) - page of the posts to retrieve
+- _str_ *api_key* - e621 API key, used for authorization
+- _str_ *username* - e621 username, used for authorization
+- _int_ *limit* (optional) - number of posts to retrieve, capped at a maximum of 320 posts
+- _list[str]_ *tags* (optional) - a list of tags to search for
+- _int_ *page* (optional) - page of the posts to retrieve
 
 === returns
 
-list[Post] *posts* - list of retrieved posts
+_list[Post]_ *posts* - list of retrieved posts
 
 
 == `list_favorites`
@@ -38,13 +38,13 @@ lists the favorite of a given user or the authorized user
 
 === parameters
 
-- str *api_key* - e621 API key, used for authorization
-- str *username* - e621 username, used for authorization
-- int *user_id* (optional) - ID of the target user, authorized user will be used if unspecified
+- _str_ *api_key* - e621 API key, used for authorization
+- _str_ *username* - e621 username, used for authorization
+- _int_ *user_id* (optional) - ID of the target user, authorized user will be used if unspecified
 
 === returns
 
-list[Post] *posts* - list of retrieved posts
+_list[Post]_ *posts* - list of retrieved posts
 
 
 == `get_post`
@@ -55,10 +55,10 @@ retrieves post of a given ID
 
 === parameters
 
-- str *api_key* - e621 API key, used for authorization
-- str *username* - e621 username, used for authorization
-- int *post_id* - ID of the post to retrieve
+- _str_ *api_key* - e621 API key, used for authorization
+- _str_ *username* - e621 username, used for authorization
+- _int_ *post_id* - ID of the post to retrieve
 
 === returns
 
-Post *post* - retrieved post
+_Post_ *post* - retrieved post
