@@ -8,11 +8,11 @@
 
 === references
 
-* *link:references/requests[requests]*
+* *link:references/requests.adoc[requests]*
 * *posts*
-** *link:references/posts/interactions[interactions]*
-** *link:references/posts/Post[Post]*
-** *link:references/posts/File[File]*
-** *link:references/posts/Preview[Preview]*
-** *link:references/posts/Score[Score]*
-** *link:references/posts/Tags[Tags]*
+** *link:references/posts/interactions.adoc[interactions]*
+** *link:references/posts/Post.adoc[Post]*
+** *link:references/posts/File.adoc[File]*
+** *link:references/posts/Preview.adoc[Preview]*
+** *link:references/posts/Score.adoc[Score]*
+** *link:references/posts/Tags.adoc[Tags]*
