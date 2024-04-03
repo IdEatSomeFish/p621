@@ -48,12 +48,12 @@ class Post:
         self.id: int = post['id']
         self.description: str = post['description']
 
-        self.created_at: str = post['created_at']
-        self.updated_at: str = post['updated_at']
-
         self.file: File = File(post['file'])
         self.preview: Preview = Preview(post['preview'])
         self.sources: list[str] = post['sources']
+
+        self.created_at: str = post['created_at']
+        self.updated_at: str = post['updated_at']
 
         self.score: Score = Score(post['score'])
         self.favorite_count: int = post['fav_count']
