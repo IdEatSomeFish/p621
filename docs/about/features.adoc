@@ -15,3 +15,6 @@
 * favoriting and unfavoriting posts
 * voting posts
 * listing tags
+
+
+== link:../contents.adoc[contents]
