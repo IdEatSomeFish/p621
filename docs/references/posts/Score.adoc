@@ -34,3 +34,6 @@ resultant votes between upvotes and downvotes
 === returns
 
 _int_ - total score
+
+
+== link:../../contents.adoc[contents]

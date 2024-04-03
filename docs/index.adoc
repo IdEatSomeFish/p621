@@ -22,9 +22,4 @@ version 0.1.1
 
 *p621* lets you search, retrieve information and interact with posts on e621 extremely easily with Python!
 
-== contents
-
-=== about
-
-- *link:about/features.adoc[features]*
-- *link:about/installation.adoc[installation]*
+include::contents.adoc[contents]

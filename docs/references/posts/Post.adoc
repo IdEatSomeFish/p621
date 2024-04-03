@@ -128,3 +128,6 @@ downloads the source file of the post
 `Post.*open*()`
 
 opens the web page of the post on the browser
+
+
+== link:../../contents.adoc[contents]

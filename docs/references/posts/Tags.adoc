@@ -58,3 +58,6 @@ all tags
 === returns
 
 _int_ - all tags
+
+
+== link:../../contents.adoc[contents]

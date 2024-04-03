@@ -69,3 +69,6 @@ retrieves post of a given ID
 === returns
 
 _Post_ - retrieved post
+
+
+== link:../contents.adoc[contents]
