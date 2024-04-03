@@ -1,0 +1,16 @@
+= Preview
+
+`p621.posts.*Preview*`
+
+== attributes
+
+[cols='1,1,5']
+|===
+|`_list[int]_`
+|`*dimensions*`
+|width and height of the preview image
+
+|`_str_`
+|`*url*`
+|URL of the preview image
+|===

@@ -1,11 +1,18 @@
-[cols='1,5']
+= requests
+
+== functions
+
+[cols='1,1,5']
 |===
+|`_list[Post]_`
 |`*search_posts*`
 |retrieves a list of posts, tags can be provided for specific searches
 
+|`_list[Post]_`
 |`*list_favorites*`
 |lists the favorite of a given user or the authorized user
 
+|`_Post_`
 |`*get_post*`
 |retrieves post of a given ID
 |===
@@ -27,7 +34,7 @@ retrieves a list of posts, tags can be provided for specific searches
 
 === returns
 
-_list[Post]_ *posts* - list of retrieved posts
+_list[Post]_ - list of retrieved posts
 
 
 == `list_favorites`
@@ -44,7 +51,7 @@ lists the favorite of a given user or the authorized user
 
 === returns
 
-_list[Post]_ *posts* - list of retrieved posts
+_list[Post]_ - list of retrieved posts
 
 
 == `get_post`
@@ -61,4 +68,4 @@ retrieves post of a given ID
 
 === returns
 
-_Post_ *post* - retrieved post
+_Post_ - retrieved post

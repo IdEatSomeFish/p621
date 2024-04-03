@@ -1,3 +1,7 @@
+= interactions
+
+== procedures
+
 [cols='1,5']
 |===
 |`*download_post*`
@@ -10,7 +14,7 @@
 
 == `download_post`
 
-`p621.posts.*download_post*(post, path)`
+`p621.posts.*download_post*(_post_, _path_)`
 
 downloads the source file of the post
 
@@ -22,7 +26,7 @@ downloads the source file of the post
 
 == `open_post`
 
-`p621.posts.*open_post*(post)`
+`p621.posts.*open_post*(_post_)`
 
 opens the web page of the post on the browser
 

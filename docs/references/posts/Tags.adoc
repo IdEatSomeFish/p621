@@ -1,0 +1,60 @@
+= Tags
+
+`p621.posts.*Tags*`
+
+== attributes
+
+[cols='1,1,5']
+|===
+|`list[str]`
+|`*general*`
+|general tags
+
+|`list[str]`
+|`*artists*`
+|artist tags
+
+|`list[str]`
+|`*copyrights*`
+|copyright tags
+
+|`list[str]`
+|`*characters*`
+|character tags
+
+|`list[str]`
+|`*species*`
+|species tags
+
+|`list[str]`
+|`*invalid*`
+|invalid tags
+
+|`list[str]`
+|`*meta*`
+|meta tags
+
+|`list[str]`
+|`*lore*`
+|lore tags
+|===
+
+== methods
+
+[cols='1,1,5']
+|===
+|`list[str]`
+|`*dump*`
+|all tags
+|===
+
+
+== `dump`
+
+`Tags.*dump*()`
+
+all tags
+
+=== returns
+
+_int_ - all tags

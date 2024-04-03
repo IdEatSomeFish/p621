@@ -1,0 +1,28 @@
+= File
+
+`p621.posts.*File*`
+
+== attributes
+
+[cols='1,1,5']
+|===
+|`_list[int]_`
+|`*dimensions*`
+|width and height of the file
+
+|`_str_`
+|`*extension*`
+|file extension
+
+|`_int_`
+|`*size*`
+|file size in bytes
+
+|`_str_`
+|`*md5*`
+|preview image of the post
+
+|`_str_`
+|`*url*`
+|URL of the file (not the page)
+|===

@@ -1,0 +1,36 @@
+= Score
+
+`p621.posts.*Score*`
+
+== attributes
+
+[cols='1,1,5']
+|===
+|`int`
+|`*upvotes*`
+|number of upvotes
+
+|`int`
+|`*downvotes*`
+|number of downvotes
+|===
+
+== methods
+
+[cols='1,1,5']
+|===
+|`_int_`
+|`*total*`
+|resultant votes between upvotes and downvotes
+|===
+
+
+== `total`
+
+`Score.*total*()`
+
+resultant votes between upvotes and downvotes
+
+=== returns
+
+_int_ - total score

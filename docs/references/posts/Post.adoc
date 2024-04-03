@@ -1,0 +1,130 @@
+= Post
+
+`p621.posts.*Post*`
+
+== attributes
+
+[cols='1,1,5']
+|===
+|`_int_`
+|`*id*`
+|unique post ID
+
+|`_str_`
+|`*description*`
+|description of the post
+
+|`_File_`
+|`*file*`
+|source file of the post
+
+|`_Preview_`
+|`*preview*`
+|preview image of the post
+
+|`_list[str]_`
+|`*sources*`
+|URLs for the original source of the file
+
+|`_str_`
+|`*created_at*`
+|creation time of the post
+
+|`_str_`
+|`*updated_at*`
+|post's time of last update
+
+|`_Score_`
+|`*score*`
+|upvotes and downvotes for the post
+
+|`_int_`
+|`*favorite_count*`
+|number of favorites of the post
+
+|`_int_`
+|`*comment_count*`
+|numbers of comments of the post
+
+|`_Tags_`
+|`*tags*`
+|tags on the post
+
+|`_int_`
+|`*change_sequence*`
+|incremental number of times the post is changed
+
+|`_dict_`
+|`*flags*`
+|flags on the post
+
+|`_str_`
+|`*rating*`
+|rating of the post
+
+|`_list[str]_`
+|`*pools*`
+|pools the post is a part of
+
+|`_str_`
+|`*parent*`
+|post ID of the parent of the post if the post has one
+
+|`_list[str]_`
+|`*children*`
+|post IDs of the children of the post
+
+|`_int_`
+|`*approver_id*`
+|ID of the user that approved the post
+
+|`_int_`
+|`*uploader_id*`
+|ID of the user that uploaded the post
+|===
+
+== methods
+
+[cols='1,1,5']
+|===
+|`_str_`
+|`*page_url*`
+|the URL of the post's web page
+|===
+
+[cols='1,5']
+|===
+|`*download*`
+|downloads the source file of the post
+|`*open*`
+|opens the web page of the post on the browser
+|===
+
+
+== `page_url`
+
+`Post.*page_url*()`
+
+the URL of the post's web page
+
+=== returns
+
+_str_ - page URL
+
+
+== `download`
+
+`Post.*download*(_path_)`
+
+downloads the source file of the post
+
+=== parameters
+
+- _str_ *path* (optional) - path of the download, current directory if unspecified
+
+
+== `open`
+
+`Post.*open*()`
+
+opens the web page of the post on the browser
