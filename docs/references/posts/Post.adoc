@@ -120,7 +120,7 @@ downloads the source file of the post
 
 === parameters
 
-- _str_ *path* (optional) - path of the download, current directory if unspecified
+* _str_ *path* (optional) - path of the download, current directory if unspecified
 
 
 == `open`

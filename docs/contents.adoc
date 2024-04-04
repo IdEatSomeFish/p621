@@ -9,6 +9,7 @@
 === references
 
 * *link:references/requests.adoc[requests]*
+* *link:references/Login.adoc[Login]*
 * *posts*
 ** *link:references/posts/interactions.adoc[interactions]*
 ** *link:references/posts/Post.adoc[Post]*
