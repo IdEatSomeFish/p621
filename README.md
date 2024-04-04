@@ -27,7 +27,7 @@ $ python -m pip install p621
 **[documentation can be found here](docs/index.adoc)**
 
 ## examples
-### retrieving post
+### retrieving a post
 ```python
 >>> import p621
 >>> post = p621.get_post('###', '###', 4517306)
