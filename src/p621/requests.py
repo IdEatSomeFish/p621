@@ -55,3 +55,18 @@ def get_post(api_key: str, username: str, post_id: int) -> Post:
             raise Exception("failed with invalid authorization")
         case status_code:
             raise Exception("failed with status code: " + status_code)
+        
+
+class Login:
+    def __init__(self, api_key: str, username: str) -> None:
+        self.api_key: str = api_key
+        self.username: str = username
+
+    def search_posts(self, limit: int = None, tags: list[str] = None, page: int = None) -> list[Post]:
+        search_posts(self.api_key, self.username, limit = limit, tags = tags, page = page)
+
+    def list_favorites(self, user_id: int = None) -> list[Post]:
+        list_favorites(self.api_key, self.username, user_id = user_id)
+
+    def get_post(self, post_id) -> Post:
+        get_post(self.api_key, self.username, post_id = post_id)
