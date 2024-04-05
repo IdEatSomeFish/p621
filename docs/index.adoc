@@ -1,5 +1,5 @@
 = p621
-version 0.1.0
+version 0.2.0
 
 *p621* is a Python library that allows for easy and simple interactions with e621.net the e621 API
 
