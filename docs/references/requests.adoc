@@ -9,6 +9,10 @@
 |retrieves a list of posts, tags can be provided for specific searches
 
 |`_list[Post]_`
+|`*list_popular*`
+|lists the most popular posts of a time range
+
+|`_list[Post]_`
 |`*list_favorites*`
 |lists the favorite of a given user
 
@@ -39,11 +43,27 @@ _list[Post]_ - list of retrieved posts
 
 `p621.*list_favorites*(_user_id_)`
 
-lists the favorite of a given user or the authorized user
+lists the favorite of a given user
 
 === parameters
 
 * _int_ *user_id* (optional) - ID of the target user, authorized user will be used if unspecified
+
+=== returns
+
+_list[Post]_ - list of retrieved posts
+
+
+== `list_popular`
+
+`p621.*list_popular*(_date_, _scale_)`
+
+lists the most popular posts of a time range
+
+=== parameters
+
+* _str_ *date* (optional) - date in the format of yyyy-mm-dd
+* _str_ *scale* (optional) - scale of the time range: day, week or month
 
 === returns
 

@@ -46,3 +46,19 @@ def get_post(post_id: int) -> Post:
             return Post(post)
         case status_code:
             raise Exception("failed with status code: " + status_code)
+        
+def list_popular(date: str = None, scale: str = None) -> list[Post]:
+    parameters: dict = {}
+    if date:
+        parameters['date'] = date
+    if scale:
+        parameters['scale'] = scale
+
+    response: Response = requests.get('https://e621.net/popular.json', params = parameters, headers = {'User-Agent': USER_AGENT})
+
+    match response.status_code:
+        case 200:
+            posts: dict = response.json()['posts']
+            return [Post(post) for post in posts]
+        case status_code:
+            raise Exception("failed with status code: " + status_code)
