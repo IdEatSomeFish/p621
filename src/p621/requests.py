@@ -46,9 +46,3 @@ def get_post(post_id: int) -> Post:
             return Post(post)
         case status_code:
             raise Exception("failed with status code: " + status_code)
-        
-
-class Login:
-    def __init__(self, api_key: str, username: str) -> None:
-        self.api_key: str = api_key
-        self.username: str = username
