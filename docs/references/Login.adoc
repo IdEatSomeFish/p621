@@ -26,4 +26,4 @@
 * _str_ *username* - e621 username, used for authorization
 
 
-== link:../contents.adoc[contents]
+== link:../contents[contents]

@@ -18,4 +18,4 @@
 * listing tags
 
 
-== link:../contents.adoc[contents]
+== link:../contents[contents]

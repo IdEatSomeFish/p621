@@ -10,4 +10,4 @@ $ python -m pip install p621
 ----
 
 
-== link:../contents.adoc[contents]
+== link:../contents[contents]
