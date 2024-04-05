@@ -4,7 +4,7 @@
 
 * *link:about/features.adoc[features]*
 * *link:about/installation.adoc[installation]*
-
+* *link:about/examples.adoc[examples]*
 
 === references
 
