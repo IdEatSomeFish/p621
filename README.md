@@ -7,6 +7,7 @@ an oversimplified wrapper and interactivity for the **e621** API
 ### current
 - searching posts
 - listing favorites
+- listing popular posts
 - getting posts
 - downloading posts
 - opening posts
