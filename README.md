@@ -25,7 +25,7 @@ $ python -m pip install p621
 ```
 
 ## documentation
-**[documentation can be found here](docs/index.adoc)**
+**[documentation can be found here](https://ideatsomefish.github.io/p621-documentation)**
 
 ## examples
 ### retrieving a post

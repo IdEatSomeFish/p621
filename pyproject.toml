@@ -17,7 +17,8 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/IdEatSomeFish/p621"
+Documentation = "https://ideatsomefish.github.io/p621-documentation"
+Source = "https://github.com/IdEatSomeFish/p621"
 
 [build-system]
 requires = ["hatchling"]
