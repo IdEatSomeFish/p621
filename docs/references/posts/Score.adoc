@@ -36,4 +36,4 @@ resultant votes between upvotes and downvotes
 _int_ - total score
 
 
-== link:../../contents.adoc[contents]
+== link:../../contents[contents]

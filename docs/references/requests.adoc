@@ -85,4 +85,4 @@ retrieves post of a given ID
 _Post_ - retrieved post
 
 
-== link:../contents.adoc[contents]
+== link:../contents[contents]

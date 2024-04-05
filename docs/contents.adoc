@@ -2,18 +2,18 @@
 
 === about
 
-* *link:about/features.adoc[features]*
-* *link:about/installation.adoc[installation]*
-* *link:about/examples.adoc[examples]*
+* *link:about/features[features]*
+* *link:about/installation[installation]*
+* *link:about/examples[examples]*
 
 === references
 
-* *link:references/requests.adoc[requests]*
-* *link:references/Login.adoc[Login]*
+* *link:references/requests[requests]*
+* *link:references/Login[Login]*
 * *posts*
-** *link:references/posts/interactions.adoc[interactions]*
-** *link:references/posts/Post.adoc[Post]*
-** *link:references/posts/File.adoc[File]*
-** *link:references/posts/Preview.adoc[Preview]*
-** *link:references/posts/Score.adoc[Score]*
-** *link:references/posts/Tags.adoc[Tags]*
+** *link:references/posts/interactions[interactions]*
+** *link:references/posts/Post[Post]*
+** *link:references/posts/File[File]*
+** *link:references/posts/Preview[Preview]*
+** *link:references/posts/Score[Score]*
+** *link:references/posts/Tags[Tags]*

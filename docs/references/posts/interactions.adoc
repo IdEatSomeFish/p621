@@ -35,4 +35,4 @@ opens the web page of the post on the browser
 * _Post_ *post* - the post to open
 
 
-== link:../../contents.adoc[contents]
+== link:../../contents[contents]

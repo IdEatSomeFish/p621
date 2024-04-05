@@ -60,4 +60,4 @@ all tags
 _int_ - all tags
 
 
-== link:../../contents.adoc[contents]
+== link:../../contents[contents]

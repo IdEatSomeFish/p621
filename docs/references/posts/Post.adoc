@@ -130,4 +130,4 @@ downloads the source file of the post
 opens the web page of the post on the browser
 
 
-== link:../../contents.adoc[contents]
+== link:../../contents[contents]
