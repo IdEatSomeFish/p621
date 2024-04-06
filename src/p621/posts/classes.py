@@ -68,8 +68,8 @@ class Post:
 
         self.pools: list[str] = post['pools']
 
-        self.parent: int = post['relationships']['parent_id']
-        self.children: list[str] = post['relationships']['children']
+        self.parent_id: int = post['relationships']['parent_id']
+        self.children_ids: list[int] = post['relationships']['children']
 
         self.approver_id: int = post['approver_id']
         self.uploader_id: int = post['uploader_id']
