@@ -17,3 +17,5 @@
 ** *link:references/posts/Preview[Preview]*
 ** *link:references/posts/Score[Score]*
 ** *link:references/posts/Tags[Tags]*
+* *pools*
+** *link:references/pools/Pool[Pool]*

@@ -1,0 +1,53 @@
+= File
+
+`p621.pools.*Pool*`
+
+[cols='1,1,5']
+|===
+|`_int_`
+|`*id*`
+|unique pool ID
+
+|`_str_`
+|`*name*`
+|name of the pool
+
+|`_str_`
+|`*description*`
+|description of the pool
+
+|`_int_`
+|`*post_count*`
+|number of posts in the pool
+
+|`_str_`
+|`*created_at*`
+|creation time of the pool
+
+|`_str_`
+|`*updated_at*`
+|pool's time of last update
+
+|`_str_`
+|`*category*`
+|category of the pool
+
+|`_bool_`
+|`*is_active*`
+|whether or not the pool is active
+
+|`_list[int]_`
+|`*post_ids*`
+|post IDs of the posts of the pool
+
+|`_int_`
+|`*creator_id*`
+|ID of the creator of the pool
+
+|`_str_`
+|`*creator_name*`
+|username of the creator of the pool
+|===
+
+
+== link:../../contents[contents]
