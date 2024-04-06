@@ -63,15 +63,15 @@
 |rating of the post
 
 |`_list[str]_`
-|`*pools*`
-|pools the post is a part of
+|`*pool_ids*`
+|IDs of the pools the post is a part of
 
 |`_str_`
 |`*parent_id*`
 |post ID of the parent of the post if the post has one
 
 |`_list[int]_`
-|`*children_ids*`
+|`*child_ids*`
 |post IDs of the children of the post
 
 |`_int_`
