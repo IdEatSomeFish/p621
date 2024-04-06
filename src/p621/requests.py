@@ -72,7 +72,7 @@ def get_pool(pool_id: int) -> Post:
     match response.status_code:
         case 200:
             pool: dict = response.json()
-            return Post(pool)
+            return Pool(pool)
         case status_code:
             raise Exception("failed with status code: " + status_code)
         

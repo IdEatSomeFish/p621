@@ -15,3 +15,6 @@ class Pool:
 
         self.creator_id: int = pool['creator_id']
         self.creator_name: str = pool['creator_name']
+
+    def page_url(self) -> str:
+        return 'https://e621.net/pools/' + str(self.id)
