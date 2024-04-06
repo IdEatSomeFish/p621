@@ -67,11 +67,11 @@
 |pools the post is a part of
 
 |`_str_`
-|`*parent*`
+|`*parent_id*`
 |post ID of the parent of the post if the post has one
 
-|`_list[str]_`
-|`*children*`
+|`_list[int]_`
+|`*children_ids*`
 |post IDs of the children of the post
 
 |`_int_`
