@@ -66,7 +66,7 @@ class Post:
         self.flags: dict = post['flags']
         self.rating: str = post['rating']
 
-        self.pool_ids: list[str] = post['pools']
+        self.pool_ids: list[int] = post['pools']
 
         self.parent_id: int = post['relationships']['parent_id']
         self.child_ids: list[int] = post['relationships']['children']

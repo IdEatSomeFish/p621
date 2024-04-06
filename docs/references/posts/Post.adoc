@@ -62,7 +62,7 @@
 |`*rating*`
 |rating of the post
 
-|`_list[str]_`
+|`_list[int]_`
 |`*pool_ids*`
 |IDs of the pools the post is a part of
 
