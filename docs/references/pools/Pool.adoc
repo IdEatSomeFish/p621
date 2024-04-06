@@ -49,5 +49,25 @@
 |username of the creator of the pool
 |===
 
+== methods
+
+[cols='1,1,5']
+|===
+|`_str_`
+|`*page_url*`
+|the URL of the pool's web page
+|===
+
+
+== `page_url`
+
+`Pool.*page_url*()`
+
+the URL of the pool's web page
+
+=== returns
+
+_str_ - page URL
+
 
 == link:../../contents[contents]
