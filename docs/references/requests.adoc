@@ -8,6 +8,10 @@
 |`*search_posts*`
 |retrieves a list of posts, tags can be provided for specific searches
 
+|`_list[Pool]_`
+|`*search_pools*`
+|retrieves a list of pools
+
 |`_list[Post]_`
 |`*list_popular*`
 |lists the most popular posts of a time range
@@ -19,6 +23,10 @@
 |`_Post_`
 |`*get_post*`
 |retrieves post of a given ID
+
+|`_Pool_`
+|`*get_pool*`
+|retrieves pool of a given ID
 |===
 
 
@@ -37,6 +45,22 @@ retrieves a list of posts, tags can be provided for specific searches
 === returns
 
 _list[Post]_ - list of retrieved posts
+
+
+== `search_pools`
+
+`p621.*search_pools*(_limit_, _page_)`
+
+retrieves a list of pools
+
+=== parameters
+
+* _int_ *limit* (optional) - number of pools to retrieve
+* _int_ *page* (optional) - page of the pools to retrieve
+
+=== returns
+
+_list[Pool]_ - list of retrieved pools
 
 
 == `list_favorites`
@@ -83,6 +107,21 @@ retrieves post of a given ID
 === returns
 
 _Post_ - retrieved post
+
+
+== `get_pool`
+
+`p621.*get_pool*(_pool_id_)`
+
+retrieves pool of a given ID
+
+=== parameters
+
+* _int_ *pool_id* - ID of the pool to retrieve
+
+=== returns
+
+_Pool_ - retrieved pool
 
 
 == link:../contents[contents]
