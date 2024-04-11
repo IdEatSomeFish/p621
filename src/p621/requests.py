@@ -40,8 +40,12 @@ def search_pools(limit: int = None, page: int = None) -> list[Pool]:
         case status_code:
             raise Exception("failed with status code: " + str(status_code))
 
-def list_favorites(user_id: int) -> list[Post]:
+def list_favorites(user_id: int, limit: int = None, page: int = None) -> list[Post]:
     parameters: dict = {'user_id': user_id}
+    if limit:
+        parameters['limit'] = limit
+    if page:
+        parameters['page'] = page
 
     response: Response = requests.get('https://e621.net/favorites.json', params = parameters, headers = {'User-Agent': USER_AGENT})
 

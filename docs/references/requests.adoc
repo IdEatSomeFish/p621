@@ -71,7 +71,9 @@ lists the favorite of a given user
 
 === parameters
 
-* _int_ *user_id* (optional) - ID of the target user, authorized user will be used if unspecified
+* _int_ *user_id* (optional) - ID of the target user
+* _int_ *limit* (optional) - number of posts to retrieve
+* _int_ *page* (optional) - page of the posts to retrieve
 
 === returns
 
