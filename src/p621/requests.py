@@ -22,7 +22,7 @@ def search_posts(limit: int = None, tags: list[str] = None, page: int = None) ->
             posts: dict = response.json()['posts']
             return [Post(post) for post in posts]
         case status_code:
-            raise Exception("failed with status code: " + status_code)
+            raise Exception("failed with status code: " + str(status_code))
         
 def search_pools(limit: int = None, page: int = None) -> list[Pool]:
     parameters: dict = {}
@@ -38,7 +38,7 @@ def search_pools(limit: int = None, page: int = None) -> list[Pool]:
             pools: dict = response.json()
             return [Post(pool) for pool in pools]
         case status_code:
-            raise Exception("failed with status code: " + status_code)
+            raise Exception("failed with status code: " + str(status_code))
 
 def list_favorites(user_id: int) -> list[Post]:
     parameters: dict = {'user_id': user_id}
@@ -50,7 +50,7 @@ def list_favorites(user_id: int) -> list[Post]:
             posts: dict = response.json()['posts']
             return [Post(post) for post in posts]
         case status_code:
-            raise Exception("failed with status code: " + status_code)
+            raise Exception("failed with status code: " + str(status_code))
         
 def get_post(post_id: int) -> Post:
     url: str = 'https://e621.net/posts/{}.json'.format(post_id)
@@ -62,7 +62,7 @@ def get_post(post_id: int) -> Post:
             post: dict = response.json()['post']
             return Post(post)
         case status_code:
-            raise Exception("failed with status code: " + status_code)
+            raise Exception("failed with status code: " + str(status_code))
         
 def get_pool(pool_id: int) -> Post:
     url: str = 'https://e621.net/pools/{}.json'.format(pool_id)
@@ -74,7 +74,7 @@ def get_pool(pool_id: int) -> Post:
             pool: dict = response.json()
             return Pool(pool)
         case status_code:
-            raise Exception("failed with status code: " + status_code)
+            raise Exception("failed with status code: " + str(status_code))
         
 def list_popular(date: str = None, scale: str = None) -> list[Post]:
     parameters: dict = {}
@@ -90,4 +90,4 @@ def list_popular(date: str = None, scale: str = None) -> list[Post]:
             posts: dict = response.json()['posts']
             return [Post(post) for post in posts]
         case status_code:
-            raise Exception("failed with status code: " + status_code)
+            raise Exception("failed with status code: " + str(status_code))
