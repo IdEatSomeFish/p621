@@ -49,7 +49,7 @@ _list[Post]_ - list of retrieved posts
 
 == `search_pools`
 
-`p621.*search_pools*(_limit_, _page_)`
+`p621.*list_pools*(_limit_, _page_)`
 
 retrieves a list of pools
 

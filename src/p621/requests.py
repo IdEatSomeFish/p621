@@ -24,7 +24,7 @@ def search_posts(limit: int = None, tags: list[str] = None, page: int = None) ->
         case status_code:
             raise Exception("failed with status code: " + str(status_code))
         
-def search_pools(limit: int = None, page: int = None) -> list[Pool]:
+def list_pools(limit: int = None, page: int = None) -> list[Pool]:
     parameters: dict = {}
     if limit:
         parameters['limit'] = limit
