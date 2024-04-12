@@ -7,13 +7,13 @@ from requests import Response
 USER_AGENT: str = 'p621/0.2.0'
 ROOT_URL: str = 'https://e621.net/'
 
-def search_posts(limit: int = None, tags: list[str] = None, page: int = None) -> list[Post]:
+def search_posts(tags: list[str] = None, limit: int = None, page: int = None) -> list[Post]:
     url: str = ROOT_URL + 'posts.json'
     parameters: dict = {}
-    if limit:
-        parameters['limit'] = limit
     if tags:
         parameters['tags'] = ' '.join(tags)
+    if limit:
+        parameters['limit'] = limit
     if page:
         parameters['page'] = page
 
