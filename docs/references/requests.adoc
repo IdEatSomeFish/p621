@@ -32,14 +32,14 @@
 
 == `search_posts`
 
-`p621.*search_posts*(_limit_, _tags_, _page_)`
+`p621.*search_posts*(_tags_, _limit_, _page_)`
 
 retrieves a list of posts, tags can be provided for specific searches
 
 === parameters
 
-* _int_ *limit* (optional) - number of posts to retrieve, capped at a maximum of 320 posts
 * _list[str]_ *tags* (optional) - a list of tags to search for
+* _int_ *limit* (optional) - number of posts to retrieve, capped at a maximum of 320 posts
 * _int_ *page* (optional) - page of the posts to retrieve
 
 === returns
