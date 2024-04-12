@@ -1,9 +1,6 @@
 from .posts import Post
 from .pools import Pool
 
-import requests
-from requests import Response
-
 USER_AGENT: str = 'p621/0.2.0'
 
 def search_posts(limit: int = None, tags: list[str] = None, page: int = None) -> list[Post]:
