@@ -15,6 +15,17 @@
 |e621 username
 |===
 
+== methods
+
+[cols='1,5']
+|===
+|`*vote*`
+|upvote or downvotes a post
+
+|`*favorite*`
+|adds a post to favorites
+|===
+
 
 == constructor
 
@@ -24,6 +35,29 @@
 
 * _str_ *api_key* - e621 API key, used for authorization
 * _str_ *username* - e621 username, used for authorization
+
+
+== `vote`
+
+`Login.*vote*(_post_id_, _vote_)`
+
+upvote or downvotes a post
+
+=== parameters
+
+* _int_ *post_id* - post id of the post to vote on
+* _int_ *vote* - the vote to give, +1 to upvote, -1 to downvote
+
+
+== `favorite`
+
+`Login.*favorite*(_post_id_)`
+
+adds a post to favorites
+
+=== parameters
+
+* _int_ *post_id* - post id of the post to favorite
 
 
 == link:../contents[contents]
