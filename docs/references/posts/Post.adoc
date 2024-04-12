@@ -96,6 +96,7 @@
 |===
 |`*download*`
 |downloads the source file of the post
+
 |`*open*`
 |opens the web page of the post on the browser
 |===
