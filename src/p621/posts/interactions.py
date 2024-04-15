@@ -1,5 +1,6 @@
 from .classes import Post
 
+
 def download_post(post: Post, path: str = None) -> None:
     import requests
     from requests import Response
@@ -19,6 +20,7 @@ def download_post(post: Post, path: str = None) -> None:
 
         with open(target, 'wb') as file:
             file.write(response.content)
+
 
 def open_post(post: Post) -> None:
     import webbrowser

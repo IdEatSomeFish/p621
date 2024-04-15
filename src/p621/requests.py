@@ -4,11 +4,11 @@ from .pools import Pool
 import requests
 from requests import Response
 
-USER_AGENT: str = 'p621/0.2.0'
-ROOT_URL: str = 'https://e621.net/'
+from .data import USER_AGENT, ROOT_URL
+
 
 def search_posts(tags: list[str] = None, limit: int = None, page: int = None) -> list[Post]:
-    url: str = ROOT_URL + 'posts.json'
+    url: str = '{root}/posts.json'.format(root = ROOT_URL)
     parameters: dict = {}
     if tags:
         parameters['tags'] = ' '.join(tags)
@@ -18,16 +18,18 @@ def search_posts(tags: list[str] = None, limit: int = None, page: int = None) ->
         parameters['page'] = page
 
     response: Response = requests.get(url, params = parameters, headers = {'User-Agent': USER_AGENT})
-    
     match response.status_code:
         case 200:
-            posts: dict = response.json()['posts']
-            return [Post(post) for post in posts]
+            pass
         case status_code:
             raise Exception("failed with status code: " + str(status_code))
-        
+    
+    posts: dict = response.json()['posts']
+    return [Post(post) for post in posts]
+
+
 def list_pools(limit: int = None, page: int = None) -> list[Pool]:
-    url: str = ROOT_URL + 'pools.json'
+    url: str = '{root}/pools.json'.format(root = ROOT_URL)
     parameters: dict = {}
     if limit:
         parameters['limit'] = limit
@@ -35,16 +37,18 @@ def list_pools(limit: int = None, page: int = None) -> list[Pool]:
         parameters['page'] = page
 
     response: Response = requests.get(url, params = parameters, headers = {'User-Agent': USER_AGENT})
-    
     match response.status_code:
         case 200:
-            pools: dict = response.json()
-            return [Post(pool) for pool in pools]
+            pass
         case status_code:
             raise Exception("failed with status code: " + str(status_code))
+    
+    pools: dict = response.json()
+    return [Post(pool) for pool in pools]
+
 
 def list_favorites(user_id: int, limit: int = None, page: int = None) -> list[Post]:
-    url: str = ROOT_URL + 'favorites.json'
+    url: str = '{root}/favorites.json'.format(root = ROOT_URL)
     parameters: dict = {'user_id': user_id}
     if limit:
         parameters['limit'] = limit
@@ -52,40 +56,18 @@ def list_favorites(user_id: int, limit: int = None, page: int = None) -> list[Po
         parameters['page'] = page
 
     response: Response = requests.get(url, params = parameters, headers = {'User-Agent': USER_AGENT})
-
     match response.status_code:
         case 200:
-            posts: dict = response.json()['posts']
-            return [Post(post) for post in posts]
+            pass
         case status_code:
             raise Exception("failed with status code: " + str(status_code))
-        
-def get_post(post_id: int) -> Post:
-    url: str = ROOT_URL + 'posts/{}.json'.format(post_id)
+    
+    posts: dict = response.json()['posts']
+    return [Post(post) for post in posts]
 
-    response: Response = requests.get(url, headers = {'User-Agent': USER_AGENT})
 
-    match response.status_code:
-        case 200:
-            post: dict = response.json()['post']
-            return Post(post)
-        case status_code:
-            raise Exception("failed with status code: " + str(status_code))
-        
-def get_pool(pool_id: int) -> Post:
-    url: str = ROOT_URL + 'pools/{}.json'.format(pool_id)
-
-    response: Response = requests.get(url, headers = {'User-Agent': USER_AGENT})
-
-    match response.status_code:
-        case 200:
-            pool: dict = response.json()
-            return Pool(pool)
-        case status_code:
-            raise Exception("failed with status code: " + str(status_code))
-        
 def list_popular(date: str = None, scale: str = None) -> list[Post]:
-    url: str = ROOT_URL + 'popular.json'
+    url: str = '{root}/popular.json'.format(root = ROOT_URL)
     parameters: dict = {}
     if date:
         parameters['date'] = date
@@ -93,10 +75,39 @@ def list_popular(date: str = None, scale: str = None) -> list[Post]:
         parameters['scale'] = scale
 
     response: Response = requests.get(url, params = parameters, headers = {'User-Agent': USER_AGENT})
-
     match response.status_code:
         case 200:
-            posts: dict = response.json()['posts']
-            return [Post(post) for post in posts]
+            pass
         case status_code:
             raise Exception("failed with status code: " + str(status_code))
+        
+    posts: dict = response.json()['posts']
+    return [Post(post) for post in posts]
+
+
+def get_post(post_id: int) -> Post:
+    url: str = '{root}/posts/{id}.json'.format(root = ROOT_URL, id = post_id)
+
+    response: Response = requests.get(url, headers = {'User-Agent': USER_AGENT})
+    match response.status_code:
+        case 200:
+            pass
+        case status_code:
+            raise Exception("failed with status code: " + str(status_code))
+    
+    post: dict = response.json()['post']
+    return Post(post)
+
+
+def get_pool(pool_id: int) -> Post:
+    url: str = '{root}/pools/{id}.json'.format(root = ROOT_URL, id = pool_id)
+    
+    response: Response = requests.get(url, headers = {'User-Agent': USER_AGENT})
+    match response.status_code:
+        case 200:
+            pass
+        case status_code:
+            raise Exception("failed with status code: " + str(status_code))
+    
+    pool: dict = response.json()
+    return Pool(pool)
