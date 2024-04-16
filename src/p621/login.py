@@ -8,7 +8,7 @@ class Login:
         self.username: str = username
 
     def vote(self, post_id: int, vote: int) -> None:
-        url: str = '{root}/posts/{id}/votes.json'.format(root = ROOT_URL, id = post_id)
+        url: str = f'{ROOT_URL}/posts/{post_id}/votes.json'
         parameters: dict = {
             'api_key': self.api_key,
             'login': self.username,
@@ -24,7 +24,7 @@ class Login:
                 raise Exception("failed with status code: " + str(status_code))
             
     def favorite(self, post_id: int) -> None:
-        url: str = '{root}/favorites.json'.format(root = ROOT_URL)
+        url: str = f'{ROOT_URL}/favorites.json'
         parameters: dict = {
             'api_key': self.api_key,
             'login': self.username,
