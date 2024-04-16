@@ -3,7 +3,6 @@ from .classes import Post
 
 def download_post(post: Post, path: str = None) -> None:
     import requests
-    from requests import Response
     import os
 
     target: str = str(post.id) + '.' + post.file.extension
@@ -16,7 +15,7 @@ def download_post(post: Post, path: str = None) -> None:
     url: str = post.file.url
 
     if url:
-        response: Response = requests.get(url)
+        response: requests.Response = requests.get(url)
 
         with open(target, 'wb') as file:
             file.write(response.content)

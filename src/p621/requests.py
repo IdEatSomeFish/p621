@@ -2,7 +2,6 @@ from .posts import Post
 from .pools import Pool
 
 import requests
-from requests import Response
 
 from .data import USER_AGENT, ROOT_URL
 
@@ -17,7 +16,7 @@ def search_posts(tags: list[str] = None, limit: int = None, page: int = None) ->
     if page:
         parameters['page'] = page
 
-    response: Response = requests.get(url, params = parameters, headers = {'User-Agent': USER_AGENT})
+    response: requests.Response = requests.get(url, params = parameters, headers = {'User-Agent': USER_AGENT})
     match response.status_code:
         case 200:
             pass
@@ -36,7 +35,7 @@ def list_pools(limit: int = None, page: int = None) -> list[Pool]:
     if page:
         parameters['page'] = page
 
-    response: Response = requests.get(url, params = parameters, headers = {'User-Agent': USER_AGENT})
+    response: requests.Response = requests.get(url, params = parameters, headers = {'User-Agent': USER_AGENT})
     match response.status_code:
         case 200:
             pass
@@ -55,7 +54,7 @@ def list_favorites(user_id: int, limit: int = None, page: int = None) -> list[Po
     if page:
         parameters['page'] = page
 
-    response: Response = requests.get(url, params = parameters, headers = {'User-Agent': USER_AGENT})
+    response: requests.Response = requests.get(url, params = parameters, headers = {'User-Agent': USER_AGENT})
     match response.status_code:
         case 200:
             pass
@@ -74,7 +73,7 @@ def list_popular(date: str = None, scale: str = None) -> list[Post]:
     if scale:
         parameters['scale'] = scale
 
-    response: Response = requests.get(url, params = parameters, headers = {'User-Agent': USER_AGENT})
+    response: requests.Response = requests.get(url, params = parameters, headers = {'User-Agent': USER_AGENT})
     match response.status_code:
         case 200:
             pass
@@ -88,7 +87,7 @@ def list_popular(date: str = None, scale: str = None) -> list[Post]:
 def get_post(post_id: int) -> Post:
     url: str = '{root}/posts/{id}.json'.format(root = ROOT_URL, id = post_id)
 
-    response: Response = requests.get(url, headers = {'User-Agent': USER_AGENT})
+    response: requests.Response = requests.get(url, headers = {'User-Agent': USER_AGENT})
     match response.status_code:
         case 200:
             pass
@@ -102,7 +101,7 @@ def get_post(post_id: int) -> Post:
 def get_pool(pool_id: int) -> Post:
     url: str = '{root}/pools/{id}.json'.format(root = ROOT_URL, id = pool_id)
     
-    response: Response = requests.get(url, headers = {'User-Agent': USER_AGENT})
+    response: requests.Response = requests.get(url, headers = {'User-Agent': USER_AGENT})
     match response.status_code:
         case 200:
             pass

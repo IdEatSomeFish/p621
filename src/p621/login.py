@@ -1,6 +1,4 @@
 import requests
-from requests import Response
-
 from .data import USER_AGENT, ROOT_URL
 
 
@@ -18,7 +16,7 @@ class Login:
             'no_unvote': True,
         }
 
-        response: Response = requests.post(url, params = parameters, headers = {'User-Agent': USER_AGENT})
+        response: requests.Response = requests.post(url, params = parameters, headers = {'User-Agent': USER_AGENT})
         match response.status_code:
             case 200:
                 pass
@@ -33,7 +31,7 @@ class Login:
             'post_id': post_id,
         }
 
-        response: Response = requests.post(url, params = parameters, headers = {'User-Agent': USER_AGENT})
+        response: requests.Response = requests.post(url, params = parameters, headers = {'User-Agent': USER_AGENT})
         match response.status_code:
             case 200:
                 pass
