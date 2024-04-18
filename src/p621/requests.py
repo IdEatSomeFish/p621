@@ -1,7 +1,7 @@
+import requests
+
 from .posts import Post
 from .pools import Pool
-
-import requests
 
 from .data import USER_AGENT, ROOT_URL
 
