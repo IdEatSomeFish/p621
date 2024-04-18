@@ -5,7 +5,7 @@ def download_post(post: Post, path: str = None) -> None:
     import requests
     import os
 
-    target: str = str(post.id) + '.' + post.file.extension
+    target: str = f'{post.id}.{post.file.extension}'
     if path:
         target = path + '/' + target
 

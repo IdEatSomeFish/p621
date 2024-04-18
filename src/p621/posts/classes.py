@@ -75,7 +75,7 @@ class Post:
         self.uploader_id: int = post['uploader_id']
 
     def page_url(self) -> str:
-        return 'https://e621.net/posts/' + str(self.id)
+        return f'https://e621.net/posts/{self.id}'
 
     def download(self, path: str = None) -> None:
         from .interactions import download_post
