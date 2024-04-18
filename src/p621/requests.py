@@ -5,8 +5,10 @@ from .pools import Pool
 
 from .data import USER_AGENT, ROOT_URL
 
+from . import Login
 
-def search_posts(tags: list[str] | str = None, limit: int = None, page: int | str = None) -> list[Post]:
+
+def search_posts(tags: list[str] | str = None, limit: int = None, page: int | str = None, login: Login = None) -> list[Post]:
     url: str = f'{ROOT_URL}/posts.json'
     parameters: dict = {}
     if tags:
@@ -15,6 +17,9 @@ def search_posts(tags: list[str] | str = None, limit: int = None, page: int | st
         parameters['limit'] = limit
     if page:
         parameters['page'] = page
+    if login:
+        parameters['api_key'] = login.api_key
+        parameters['login'] = login.username
 
     response: requests.Response = requests.get(url, params = parameters, headers = {'User-Agent': USER_AGENT})
     match response.status_code:
@@ -27,13 +32,16 @@ def search_posts(tags: list[str] | str = None, limit: int = None, page: int | st
     return [Post(post) for post in posts]
 
 
-def list_pools(limit: int = None, page: int | str = None) -> list[Pool]:
+def list_pools(limit: int = None, page: int | str = None, login: Login = None) -> list[Pool]:
     url: str = f'{ROOT_URL}/pools.json'
     parameters: dict = {}
     if limit:
         parameters['limit'] = limit
     if page:
         parameters['page'] = page
+    if login:
+        parameters['api_key'] = login.api_key
+        parameters['login'] = login.username
 
     response: requests.Response = requests.get(url, params = parameters, headers = {'User-Agent': USER_AGENT})
     match response.status_code:
@@ -46,13 +54,16 @@ def list_pools(limit: int = None, page: int | str = None) -> list[Pool]:
     return [Post(pool) for pool in pools]
 
 
-def list_favorites(user_id: int, limit: int = None, page: int | str = None) -> list[Post]:
+def list_favorites(user_id: int, limit: int = None, page: int | str = None, login: Login = None) -> list[Post]:
     url: str = f'{ROOT_URL}/favorites.json'
     parameters: dict = {'user_id': user_id}
     if limit:
         parameters['limit'] = limit
     if page:
         parameters['page'] = page
+    if login:
+        parameters['api_key'] = login.api_key
+        parameters['login'] = login.username
 
     response: requests.Response = requests.get(url, params = parameters, headers = {'User-Agent': USER_AGENT})
     match response.status_code:
@@ -65,13 +76,16 @@ def list_favorites(user_id: int, limit: int = None, page: int | str = None) -> l
     return [Post(post) for post in posts]
 
 
-def list_popular(date: str = None, scale: str = None) -> list[Post]:
+def list_popular(date: str = None, scale: str = None, login: Login = None) -> list[Post]:
     url: str = f'{ROOT_URL}/popular.json'
     parameters: dict = {}
     if date:
         parameters['date'] = date
     if scale:
         parameters['scale'] = scale
+    if login:
+        parameters['api_key'] = login.api_key
+        parameters['login'] = login.username
 
     response: requests.Response = requests.get(url, params = parameters, headers = {'User-Agent': USER_AGENT})
     match response.status_code:
