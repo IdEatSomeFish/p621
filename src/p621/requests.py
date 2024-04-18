@@ -6,11 +6,11 @@ import requests
 from .data import USER_AGENT, ROOT_URL
 
 
-def search_posts(tags: list[str] = None, limit: int = None, page: int = None) -> list[Post]:
+def search_posts(tags: list[str] | str = None, limit: int = None, page: int | str = None) -> list[Post]:
     url: str = f'{ROOT_URL}/posts.json'
     parameters: dict = {}
     if tags:
-        parameters['tags'] = ' '.join(tags)
+        parameters['tags'] = tags if type(tags) == str else ' '.join(tags)
     if limit:
         parameters['limit'] = limit
     if page:
@@ -27,7 +27,7 @@ def search_posts(tags: list[str] = None, limit: int = None, page: int = None) ->
     return [Post(post) for post in posts]
 
 
-def list_pools(limit: int = None, page: int = None) -> list[Pool]:
+def list_pools(limit: int = None, page: int | str = None) -> list[Pool]:
     url: str = f'{ROOT_URL}/pools.json'
     parameters: dict = {}
     if limit:
@@ -46,7 +46,7 @@ def list_pools(limit: int = None, page: int = None) -> list[Pool]:
     return [Post(pool) for pool in pools]
 
 
-def list_favorites(user_id: int, limit: int = None, page: int = None) -> list[Post]:
+def list_favorites(user_id: int, limit: int = None, page: int | str = None) -> list[Post]:
     url: str = f'{ROOT_URL}/favorites.json'
     parameters: dict = {'user_id': user_id}
     if limit:
