@@ -7,6 +7,9 @@ class Login:
     def __init__(self, api_key: str, username: str) -> None:
         self.api_key: str = api_key
         self.username: str = username
+        
+    def __repr__(self):
+        return f'<Login [{self.username}]>'
 
     def vote(self, post_id: int, vote: int) -> None:
         url: str = f'{ROOT_URL}/posts/{post_id}/votes.json'
