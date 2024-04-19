@@ -16,5 +16,8 @@ class Pool:
         self.creator_id: int = pool['creator_id']
         self.creator_name: str = pool['creator_name']
 
+    def __repr__(self) -> None:
+        return f'<Post [{self.id}]>'
+
     def page_url(self) -> str:
         return 'https://e621.net/pools/' + str(self.id)

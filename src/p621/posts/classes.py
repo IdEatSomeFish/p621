@@ -74,6 +74,9 @@ class Post:
         self.approver_id: int = post['approver_id']
         self.uploader_id: int = post['uploader_id']
 
+    def __repr__(self) -> None:
+        return f'<Post [{self.id}]>'
+
     def page_url(self) -> str:
         return f'https://e621.net/posts/{self.id}'
 
