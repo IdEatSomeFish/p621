@@ -8,7 +8,7 @@ class Login:
         self.api_key: str = api_key
         self.username: str = username
         
-    def __repr__(self):
+    def __repr__(self) -> None:
         return f'<Login [{self.username}]>'
 
     def vote(self, post_id: int, vote: int) -> None:
