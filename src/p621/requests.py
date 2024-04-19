@@ -5,7 +5,7 @@ from .pools import Pool
 
 from .data import USER_AGENT, ROOT_URL
 
-from . import Login
+from .login import Login
 
 
 def search_posts(tags: list[str] | str = None, limit: int = None, page: int | str = None, login: Login = None) -> list[Post]:
