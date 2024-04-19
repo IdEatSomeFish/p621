@@ -9,6 +9,9 @@ class File:
         self.md5: str = file['md5']
         self.url: str = file['url']
 
+    def __repr__(self) -> None:
+        return f'<File [{self.dimensions[0]}x{self.dimensions[1]}]>'
+
 
 class Preview:
     def __init__(self, preview: dict) -> None:
@@ -18,12 +21,18 @@ class Preview:
         ]
         self.url: str = preview['url']
 
+    def __repr__(self) -> None:
+        return f'<File [{self.dimensions[0]}x{self.dimensions[1]}]>'
+
 
 class Score:
     def __init__(self, score: dict) -> None:
         self.upvotes: int = score['up']
         self.downvotes: int = -score['down']
 
+    def __repr__(self) -> None:
+        return f'<Score [{self.total()}]>'
+    
     def total(self) -> int:
         return self.upvotes - self.downvotes
     
@@ -38,6 +47,12 @@ class Tags:
         self.invalid: list[str] = tags['invalid']
         self.meta: list[str] = tags['meta']
         self.lore: list[str] = tags['lore']
+
+    def __repr__(self) -> None:
+        return f'<Tags [{self.count()}]>'
+    
+    def count(self) -> int:
+        return len(self.dump())
 
     def dump(self) -> list[str]:
         return self.general + self.artists + self.copyrights + self.characters + self.species + self.invalid + self.meta + self.lore
