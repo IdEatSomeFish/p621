@@ -95,7 +95,7 @@ class Post:
     def page_url(self) -> str:
         return f'https://e621.net/posts/{self.id}'
 
-    def download(self, path: str = None) -> None:
+    def download(self, path: str | None = None) -> None:
         from .interactions import download_post
         download_post(self, path)
 

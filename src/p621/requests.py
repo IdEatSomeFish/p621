@@ -8,7 +8,7 @@ from .data import USER_AGENT, ROOT_URL
 from .login import Login
 
 
-def search_posts(tags: list[str] | str = None, limit: int = None, page: int | str = None, login: Login = None) -> list[Post]:
+def search_posts(tags: list[str] | str | None = None, limit: int | None = None, page: int | str | None = None, login: Login | None = None) -> list[Post]:
     url: str = f'{ROOT_URL}/posts.json'
     parameters: dict = {}
     if tags:
@@ -32,7 +32,7 @@ def search_posts(tags: list[str] | str = None, limit: int = None, page: int | st
     return [Post(post) for post in posts]
 
 
-def list_pools(limit: int = None, page: int | str = None, login: Login = None) -> list[Pool]:
+def list_pools(limit: int | None = None, page: int | str | None = None, login: Login | None = None) -> list[Pool]:
     url: str = f'{ROOT_URL}/pools.json'
     parameters: dict = {}
     if limit:
@@ -51,10 +51,10 @@ def list_pools(limit: int = None, page: int | str = None, login: Login = None) -
             raise Exception("failed with status code: " + str(status_code))
     
     pools: dict = response.json()
-    return [Post(pool) for pool in pools]
+    return [Pool(pool) for pool in pools]
 
 
-def list_favorites(user_id: int, limit: int = None, page: int | str = None, login: Login = None) -> list[Post]:
+def list_favorites(user_id: int, limit: int | None = None, page: int | str | None = None, login: Login | None = None) -> list[Post]:
     url: str = f'{ROOT_URL}/favorites.json'
     parameters: dict = {'user_id': user_id}
     if limit:
@@ -76,7 +76,7 @@ def list_favorites(user_id: int, limit: int = None, page: int | str = None, logi
     return [Post(post) for post in posts]
 
 
-def list_popular(date: str = None, scale: str = None, login: Login = None) -> list[Post]:
+def list_popular(date: str | None = None, scale: str | None = None, login: Login | None = None) -> list[Post]:
     url: str = f'{ROOT_URL}/popular.json'
     parameters: dict = {}
     if date:
@@ -112,7 +112,7 @@ def get_post(post_id: int) -> Post:
     return Post(post)
 
 
-def get_pool(pool_id: int) -> Post:
+def get_pool(pool_id: int) -> Pool:
     url: str = f'{ROOT_URL}/pools/{pool_id}.json'
     
     response: requests.Response = requests.get(url, headers = {'User-Agent': USER_AGENT})

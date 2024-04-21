@@ -1,7 +1,7 @@
 from .classes import Post
 
 
-def download_post(post: Post, path: str = None) -> None:
+def download_post(post: Post, path: str | None = None) -> None:
     import requests
     import os
 
