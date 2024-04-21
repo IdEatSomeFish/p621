@@ -16,7 +16,7 @@ class Pool:
         self.creator_id: int = pool['creator_id']
         self.creator_name: str = pool['creator_name']
 
-    def __repr__(self) -> None:
+    def __repr__(self) -> str:
         return f'<Post [{self.id}]>'
 
     def page_url(self) -> str:

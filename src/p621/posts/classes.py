@@ -9,7 +9,7 @@ class File:
         self.md5: str = file['md5']
         self.url: str = file['url']
 
-    def __repr__(self) -> None:
+    def __repr__(self) -> str:
         return f'<File [{self.dimensions[0]}x{self.dimensions[1]}]>'
 
 
@@ -21,7 +21,7 @@ class Preview:
         ]
         self.url: str = preview['url']
 
-    def __repr__(self) -> None:
+    def __repr__(self) -> str:
         return f'<File [{self.dimensions[0]}x{self.dimensions[1]}]>'
 
 
@@ -30,7 +30,7 @@ class Score:
         self.upvotes: int = score['up']
         self.downvotes: int = -score['down']
 
-    def __repr__(self) -> None:
+    def __repr__(self) -> str:
         return f'<Score [{self.total()}]>'
     
     def total(self) -> int:
@@ -48,7 +48,7 @@ class Tags:
         self.meta: list[str] = tags['meta']
         self.lore: list[str] = tags['lore']
 
-    def __repr__(self) -> None:
+    def __repr__(self) -> str:
         return f'<Tags [{self.count()}]>'
     
     def count(self) -> int:
@@ -89,7 +89,7 @@ class Post:
         self.approver_id: int = post['approver_id']
         self.uploader_id: int = post['uploader_id']
 
-    def __repr__(self) -> None:
+    def __repr__(self) -> str:
         return f'<Post [{self.id}]>'
 
     def page_url(self) -> str:
