@@ -1,3 +1,5 @@
+import datetime
+
 class Pool:
     def __init__(self, pool: dict) -> None:
         self.id: int = pool['id']
@@ -5,8 +7,8 @@ class Pool:
         self.description: str = pool['description']
         self.post_count: int = pool['post_count']
 
-        self.created_at: str = pool['created_at']
-        self.updated_at: str = pool['updated_at']
+        self.created_at: datetime.datetime = datetime.datetime.fromisoformat(pool['created_at'])
+        self.updated_at: datetime.datetime = datetime.datetime.fromisoformat(pool['updated_at'])
 
         self.category: str = pool['category']
         self.is_active: bool = pool['is_active']

@@ -1,3 +1,5 @@
+import datetime
+
 class File:
     def __init__(self, file: dict) -> None:
         self.dimensions: list[int] = [
@@ -67,8 +69,8 @@ class Post:
         self.preview: Preview = Preview(post['preview'])
         self.sources: list[str] = post['sources']
 
-        self.created_at: str = post['created_at']
-        self.updated_at: str = post['updated_at']
+        self.created_at: datetime.datetime = datetime.datetime.fromisoformat(post['created_at'])
+        self.updated_at: datetime.datetime = datetime.datetime.fromisoformat(post['updated_at'])
 
         self.score: Score = Score(post['score'])
         self.favorite_count: int = post['fav_count']
