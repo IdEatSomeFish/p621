@@ -7,7 +7,7 @@ def download_post(post: Post, path: str | None = None) -> None:
 
     target: str = f'{post.id}.{post.file.extension}'
     if path:
-        target = path + '/' + target
+        target = os.path.join(path, target)
 
         if not os.path.exists(path):
             os.mkdir(path)
