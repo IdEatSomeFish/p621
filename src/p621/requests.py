@@ -17,11 +17,12 @@ def search_posts(tags: list[str] | str | None = None, limit: int | None = None, 
         parameters['limit'] = limit
     if page:
         parameters['page'] = page
-    if login:
-        parameters['api_key'] = login.api_key
-        parameters['login'] = login.username
 
-    response: requests.Response = requests.get(url, params = parameters, headers = {'User-Agent': USER_AGENT})
+    headers: dict = {'User-Agent': USER_AGENT}
+    if login:
+        headers["Authorization"] = f"Basic {login._encode()}"
+
+    response: requests.Response = requests.get(url, params = parameters, headers = headers)
     match response.status_code:
         case 200:
             pass
@@ -39,11 +40,12 @@ def list_pools(limit: int | None = None, page: int | str | None = None, login: L
         parameters['limit'] = limit
     if page:
         parameters['page'] = page
-    if login:
-        parameters['api_key'] = login.api_key
-        parameters['login'] = login.username
 
-    response: requests.Response = requests.get(url, params = parameters, headers = {'User-Agent': USER_AGENT})
+    headers: dict = {'User-Agent': USER_AGENT}
+    if login:
+        headers['Authorization'] = f'Basic {login._encode()}'
+
+    response: requests.Response = requests.get(url, params = parameters, headers = headers)
     match response.status_code:
         case 200:
             pass
@@ -61,11 +63,12 @@ def list_favorites(user_id: int, limit: int | None = None, page: int | str | Non
         parameters['limit'] = limit
     if page:
         parameters['page'] = page
-    if login:
-        parameters['api_key'] = login.api_key
-        parameters['login'] = login.username
 
-    response: requests.Response = requests.get(url, params = parameters, headers = {'User-Agent': USER_AGENT})
+    headers: dict = {'User-Agent': USER_AGENT}
+    if login:
+        headers['Authorization'] = f'Basic {login._encode()}'
+
+    response: requests.Response = requests.get(url, params = parameters, headers = headers)
     match response.status_code:
         case 200:
             pass
@@ -83,11 +86,12 @@ def list_popular(date: str | None = None, scale: str | None = None, login: Login
         parameters['date'] = date
     if scale:
         parameters['scale'] = scale
-    if login:
-        parameters['api_key'] = login.api_key
-        parameters['login'] = login.username
 
-    response: requests.Response = requests.get(url, params = parameters, headers = {'User-Agent': USER_AGENT})
+    headers: dict = {'User-Agent': USER_AGENT}
+    if login:
+        headers['Authorization'] = f'Basic {login._encode()}'
+
+    response: requests.Response = requests.get(url, params = parameters, headers = headers)
     match response.status_code:
         case 200:
             pass
